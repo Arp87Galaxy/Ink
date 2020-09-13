@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.arpgalaxy.ink.core.dao.TagLinkDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.arpgalaxy.ink.core.entity.TagLinkEntity" id="tagLinkMap">
+        <result property="id" column="id"/>
+        <result property="tagId" column="tag_id"/>
+        <result property="linkId" column="link_id"/>
+        <result property="type" column="type"/>
+    </resultMap>
+
+
+</mapper>

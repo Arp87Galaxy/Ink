@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b36e6b1f-2e5f-464d-a678-9e16471db798" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\repository" />
+        <option name="mavenHome" value="E:/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="E:\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1h4orKIlhfZpeZcMvTqjB7kBXJC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\Ink\ink\ink-common\src\main\java\com\arpgalaxy\ink\common" />
+      <recent name="C:\Users\Administrator\Desktop\Ink\ink\ink-common\src\main\java\com\arpgalaxy\ink\common\utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\Ink\ink\ink-core\src\main\resources\mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="untitled" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="untitled" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InkCoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ink-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.arpgalaxy.ink.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.arpgalaxy.ink.core.InkCoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.InkCoreApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b36e6b1f-2e5f-464d-a678-9e16471db798" name="Default Changelist" comment="" />
+      <created>1599279922408</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599279922408</updated>
+      <workItem from="1599279924774" duration="1076000" />
+      <workItem from="1599281008516" duration="709000" />
+      <workItem from="1599281725317" duration="92000" />
+      <workItem from="1599281827443" duration="220000" />
+      <workItem from="1599282071973" duration="197000" />
+      <workItem from="1599282331808" duration="258000" />
+      <workItem from="1599282612403" duration="79000" />
+      <workItem from="1599282767374" duration="1967000" />
+      <workItem from="1599286893400" duration="11720000" />
+      <workItem from="1599454768034" duration="657000" />
+      <workItem from="1599529224754" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1000" y="519" width="651" height="354" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599292549754">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state x="1000" y="519" width="651" height="354" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1379@0.0.2560.1379" timestamp="1599292549754" />
+    <state x="947" y="375" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599292480322">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state x="947" y="375" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1379@0.0.2560.1379" timestamp="1599292480322" />
+    <state x="1010" y="386" key="FileChooserDialogImpl" timestamp="1599282630644">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state x="1010" y="386" key="FileChooserDialogImpl/0.0.2560.1379@0.0.2560.1379" timestamp="1599282630644" />
+    <state width="2490" height="377" key="GridCell.Tab.0.bottom" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.0.bottom/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.0.center" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.0.center/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.0.left" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.0.left/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.0.right" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.0.right/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.1.bottom" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.1.bottom/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.1.center" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.1.center/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.1.left" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.1.left/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state width="2490" height="377" key="GridCell.Tab.1.right" timestamp="1599321970805">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state width="2490" height="377" key="GridCell.Tab.1.right/0.0.2560.1379@0.0.2560.1379" timestamp="1599321970805" />
+    <state x="650" y="245" key="SettingsEditor" timestamp="1599299536214">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state x="650" y="245" key="SettingsEditor/0.0.2560.1379@0.0.2560.1379" timestamp="1599299536214" />
+    <state x="481" y="314" key="new project wizard" timestamp="1599289570481">
+      <screen x="0" y="0" width="2560" height="1379" />
+    </state>
+    <state x="481" y="314" key="new project wizard/0.0.2560.1379@0.0.2560.1379" timestamp="1599289570481" />
+  </component>
+</project>

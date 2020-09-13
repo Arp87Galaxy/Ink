@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.arpgalaxy.ink.core.dao.BookNoteDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.arpgalaxy.ink.core.entity.BookNoteEntity" id="bookNoteMap">
+        <result property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="author" column="author"/>
+        <result property="content" column="content"/>
+        <result property="contentFormat" column="content_format"/>
+        <result property="readNum" column="read_num"/>
+        <result property="commentNum" column="comment_num"/>
+        <result property="likeNum" column="like_num"/>
+        <result property="cover" column="cover"/>
+        <result property="bookId" column="book_id"/>
+        <result property="chapter" column="chapter"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="recommend" column="recommend"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="publish" column="publish"/>
+        <result property="coverType" column="cover_type"/>
+        <result property="top" column="top"/>
+    </resultMap>
+
+
+</mapper>
