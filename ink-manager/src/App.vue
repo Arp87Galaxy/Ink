@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-        <!-- <router-view name='hello'></router-view>   -->
-    <router-view name='helloworld'></router-view>
-    <router-view name='hello'></router-view>  
+    <router-view name='login'></router-view>
+    <router-view name='navbar'></router-view>
+    <router-view name='sidebar'></router-view>
+    <router-view name='main'></router-view>  
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
   }
 }
-</script>
+</script>     
 
 <style>
 #app {

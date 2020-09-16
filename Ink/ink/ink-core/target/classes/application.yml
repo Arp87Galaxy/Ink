@@ -1,6 +1,21 @@
+# Tomcat
 server:
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 1000
+    min-spare-threads: 30
+  #连接超时时间
+  connection-timeout: 5000ms
+  servlet:
+    #映射项目路径
+    context-path: /ink
   port: 9534
+
+#spring配置
 spring:
+  profiles:
+    # 环境 开发dev，测试test，生产prod
+    active: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #MySQL配置
@@ -8,7 +23,10 @@ spring:
     url: jdbc:mysql://175.24.111.52:4416/ink?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: root
+
+
 mybatis-plus:
+
   #mapper文件
   mapper-locations: classpath:mapper/**/*.xml
   #实体扫描，多个package用逗号或者分号分隔
@@ -27,3 +45,5 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     #不开启二级缓存
     cache-enabled: false
+    #打印sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

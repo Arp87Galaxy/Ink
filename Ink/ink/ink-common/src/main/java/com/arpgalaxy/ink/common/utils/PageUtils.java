@@ -40,7 +40,12 @@ public class PageUtils implements Serializable {
 	 * 列表数据
 	 */
 	private List<?> list;
-	
+
+	/**
+	 * 解决反序列化没有默认构造异常
+	 */
+	public PageUtils() {
+	}
 	/**
 	 * 分页
 	 * @param list        列表数据
@@ -48,6 +53,7 @@ public class PageUtils implements Serializable {
 	 * @param pageSize    每页记录数
 	 * @param currPage    当前页数
 	 */
+
 	public PageUtils(List<?> list, int totalCount, int pageSize, int currPage) {
 		this.list = list;
 		this.totalCount = totalCount;

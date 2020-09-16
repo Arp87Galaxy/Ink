@@ -5,6 +5,9 @@ import java.util.Map;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +39,7 @@ public class ArticleController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("core:article:list")
+//    @RequiresPermissions("core:article:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = articleService.queryPage(params);
 
