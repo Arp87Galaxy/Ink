@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.arpgalaxy.ink.core.entity.LinkEntity;
 import com.arpgalaxy.ink.core.service.LinkService;
 import com.arpgalaxy.ink.common.utils.PageUtils;
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 
 
 

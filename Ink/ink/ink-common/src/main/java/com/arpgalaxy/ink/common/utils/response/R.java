@@ -6,7 +6,7 @@
  * 版权所有，侵权必究！
  */
 
-package com.arpgalaxy.ink.common.utils;
+package com.arpgalaxy.ink.common.utils.response;
 
 import org.apache.http.HttpStatus;
 
@@ -20,7 +20,8 @@ import java.util.Map;
  */
 public class R extends HashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
-	
+
+
 	public R() {
 		put("code", 0);
 		put("msg", "success");

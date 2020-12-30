@@ -1,10 +1,13 @@
 package com.arpgalaxy.ink.core.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -52,5 +55,9 @@ public class SysUserEntity implements Serializable {
 	 * 
 	 */
 	private Integer status;
-
+	/**
+	 *
+	 */
+	@TableField(exist = false)
+	private List<SysRoleEntity> roleEntities;
 }

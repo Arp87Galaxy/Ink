@@ -6,7 +6,8 @@ const TokenKey = 'Admin-Token'
 
 // 获取 token
 export function getToken() {
-  return Cookies.get(TokenKey)
+  
+  return window.localStorage.getItem("authToken")
 }
 
 // 设置 token

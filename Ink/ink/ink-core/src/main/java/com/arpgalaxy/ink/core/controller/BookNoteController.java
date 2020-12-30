@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.arpgalaxy.ink.core.entity.BookNoteEntity;
 import com.arpgalaxy.ink.core.service.BookNoteService;
 import com.arpgalaxy.ink.common.utils.PageUtils;
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 
 
 

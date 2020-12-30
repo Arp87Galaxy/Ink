@@ -4,6 +4,8 @@ import com.arpgalaxy.ink.core.entity.ArticleEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.Map;
+
 /**
  * 文章
  * 
@@ -13,5 +15,5 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface ArticleDao extends BaseMapper<ArticleEntity> {
-	
+
 }

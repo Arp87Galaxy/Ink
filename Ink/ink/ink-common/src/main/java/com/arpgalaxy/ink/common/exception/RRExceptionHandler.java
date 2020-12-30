@@ -8,7 +8,7 @@
 
 package com.arpgalaxy.ink.common.exception;
 
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 import org.apache.shiro.authz.AuthorizationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -21,6 +21,7 @@ public class CacheConfig {
         return new KeyGenerator() {
             @Override
             public Object generate(Object target, Method method, Object... params) {
+                System.out.println(target.getClass().getName());
                 return target.getClass().getName();
             }
         };

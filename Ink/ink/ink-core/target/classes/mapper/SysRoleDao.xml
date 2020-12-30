@@ -10,6 +10,10 @@
         <result property="remark" column="remark"/>
         <result property="createUserId" column="create_user_id"/>
         <result property="createTime" column="create_time"/>
+        <collection property="sysMenuEntities" javaType="ArrayList" ofType="SysMenuEntity"
+                    resultMap="com.arpgalaxy.ink.core.dao.SysMenuDao.sysMenuMap">
+
+        </collection>
     </resultMap>
 
 

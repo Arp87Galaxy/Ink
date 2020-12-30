@@ -7,11 +7,11 @@ import {
     Message
 } from 'element-ui'
 import axios from 'axios'
-
+axios.defaults.withCredentials = true
 // 创建 axios 实例
 const http = axios.create({
     // 默认 url 配置，定义访问前缀 baseURL，可覆盖
-    baseURL: '/api',
+    baseURL: '/ink',
     // 定义请求超时时间
     timeout: 10000,
     // 请求带上 cookie
@@ -26,7 +26,7 @@ const http = axios.create({
 http.interceptors.request.use(
     config => {
         // 让每个请求携带 token
-        config.headers['Admin-Token'] = getToken()
+        config.headers['auth-Token'] = getToken()
         return config
     },
     error => {

@@ -1,23 +1,19 @@
 package com.arpgalaxy.ink.core.controller;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.arpgalaxy.ink.common.utils.response.InkStatus;
+import com.arpgalaxy.ink.common.utils.response.ResponseEntity;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.arpgalaxy.ink.core.entity.ArticleEntity;
 import com.arpgalaxy.ink.core.service.ArticleService;
 import com.arpgalaxy.ink.common.utils.PageUtils;
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 
 
 
@@ -30,7 +26,7 @@ import com.arpgalaxy.ink.common.utils.R;
  * @description  文章
  */
 @RestController
-@RequestMapping("core/article")
+@RequestMapping("core/sys/article")
 public class ArticleController {
     @Autowired
     private ArticleService articleService;
@@ -38,12 +34,15 @@ public class ArticleController {
     /**
      * 列表
      */
-    @RequestMapping("/list")
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
 //    @RequiresPermissions("core:article:list")
-    public R list(@RequestParam Map<String, Object> params){
+
+    public ResponseEntity list(@RequestParam Map<String, Object> params){
         PageUtils page = articleService.queryPage(params);
 
-        return R.ok().put("page", page);
+//        return R.ok().put("page", page);
+
+        return new ResponseEntity<PageUtils>(InkStatus.CORE_OK,"分页正常",page);
     }
 
 

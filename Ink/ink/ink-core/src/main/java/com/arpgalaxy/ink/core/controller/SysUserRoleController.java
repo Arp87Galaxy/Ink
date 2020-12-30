@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.arpgalaxy.ink.core.entity.SysUserRoleEntity;
 import com.arpgalaxy.ink.core.service.SysUserRoleService;
 import com.arpgalaxy.ink.common.utils.PageUtils;
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 
 
 

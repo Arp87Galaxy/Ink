@@ -5,6 +5,7 @@ import com.arpgalaxy.ink.common.utils.PageUtils;
 import com.arpgalaxy.ink.core.entity.SysUserEntity;
 
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 
@@ -16,5 +17,11 @@ import java.util.Map;
 public interface SysUserService extends IService<SysUserEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+
+
+    SysUserEntity queryById(Long userId);
+
+    Set<String> queryPermissions(SysUserEntity sysUserEntity);
 }
 

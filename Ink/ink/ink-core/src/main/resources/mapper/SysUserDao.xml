@@ -13,7 +13,19 @@
         <result property="createUserId" column="create_user_id"/>
         <result property="createTime" column="create_time"/>
         <result property="status" column="status"/>
+        <collection property="roleEntities" javaType="ArrayList" ofType="SysRoleEntity"
+                    resultMap="com.arpgalaxy.ink.core.dao.SysRoleDao.sysRoleMap">
+
+        </collection>
     </resultMap>
+    <select id="selectById"  resultMap="sysUserMap">
+        SELECT u.*,r.*,m.* FROM `ink_sys_user` u
+            LEFT JOIN `ink_sys_user_role` ur ON u.`user_id`=ur.`user_id`
+            LEFT JOIN `ink_sys_role` r ON ur.`role_id`=r.`role_id`
+            LEFT JOIN `ink_sys_role_menu` rm ON r.`role_id`=rm.`role_id`
+            LEFT JOIN `ink_sys_menu` m ON rm.`menu_id`=m.`menu_id`
+        WHERE u.`user_id`=#{userId};
+    </select>
 
 
 </mapper>

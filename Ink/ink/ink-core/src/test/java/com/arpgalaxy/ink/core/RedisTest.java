@@ -1,17 +1,15 @@
 package com.arpgalaxy.ink.core;
 
-import com.arpgalaxy.ink.common.utils.Constant;
-import com.arpgalaxy.ink.common.utils.PageUtils;
 import com.arpgalaxy.ink.core.entity.ArticleEntity;
-import com.arpgalaxy.ink.core.service.ArticleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -27,10 +25,20 @@ public class RedisTest {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Autowired
+
+    private RedisCacheManager cacheManager;
     @Test
     public void redisTemplateTest(){
+        Map<String, RedisCacheConfiguration> cacheConfigurations = cacheManager.getCacheConfigurations();
         redisTemplate.opsForValue().set("a",new ArticleEntity());
         System.out.println(redisTemplate.opsForValue().get("a"));
     }
+    @Test
+    public void mytest(){
+        Long i =1002L;
+        System.out.println("1"+i);
+    }
+
 
 }

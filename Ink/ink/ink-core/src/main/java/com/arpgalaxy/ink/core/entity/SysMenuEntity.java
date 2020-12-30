@@ -1,11 +1,16 @@
 package com.arpgalaxy.ink.core.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
+import org.apache.ibatis.type.Alias;
 
 /**
  * 菜单管理
@@ -16,6 +21,7 @@ import lombok.Data;
  */
 @Data
 @TableName("ink_sys_menu")
+@Alias("SysMenuEntity")
 public class SysMenuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -52,5 +58,10 @@ public class SysMenuEntity implements Serializable {
 	 * 
 	 */
 	private Integer orderNum;
-
+	/**
+	 * 子菜单
+	 */
+	@TableField(exist = false)
+	@JsonInclude(JsonInclude.Include.NON_NULL)
+	private List<SysMenuEntity> children;
 }

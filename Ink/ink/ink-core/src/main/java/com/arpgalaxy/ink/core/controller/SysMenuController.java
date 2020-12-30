@@ -1,20 +1,19 @@
 package com.arpgalaxy.ink.core.controller;
 
-import java.util.Arrays;
-import java.util.Map;
+import java.util.*;
 
+import com.arpgalaxy.ink.common.utils.response.InkStatus;
+import com.arpgalaxy.ink.common.utils.response.ResponseEntity;
+import com.arpgalaxy.ink.core.controller.commons.BaseController;
+import com.arpgalaxy.ink.core.service.SysUserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.arpgalaxy.ink.core.entity.SysMenuEntity;
 import com.arpgalaxy.ink.core.service.SysMenuService;
 import com.arpgalaxy.ink.common.utils.PageUtils;
-import com.arpgalaxy.ink.common.utils.R;
+import com.arpgalaxy.ink.common.utils.response.R;
 
 
 
@@ -26,20 +25,24 @@ import com.arpgalaxy.ink.common.utils.R;
  * @date 2020-09-05 14:47:37
  */
 @RestController
-@RequestMapping("core/sysmenu")
-public class SysMenuController {
+@RequestMapping("core/sys/menu")
+public class SysMenuController extends BaseController {
     @Autowired
     private SysMenuService sysMenuService;
-
+    @Autowired
+    private SysUserService sysUserService;
     /**
      * 列表
      */
-    @RequestMapping("/list")
-    @RequiresPermissions("core:sysmenu:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = sysMenuService.queryPage(params);
-
-        return R.ok().put("page", page);
+    @PostMapping("/init")
+//    @RequiresPermissions("core:sysmenu:list")
+    public ResponseEntity list(){
+        List<SysMenuEntity> sysMenuEntities = sysMenuService.queryMenuTreeByUserId(getUser());
+        Set<String> perms = sysUserService.queryPermissions(getUser());
+        Map resultMap = new HashMap();
+        resultMap.put("menuList",sysMenuEntities);
+        resultMap.put("perms",perms);
+        return new ResponseEntity<Map>(InkStatus.CORE_OK,"ok",resultMap);
     }
 
 

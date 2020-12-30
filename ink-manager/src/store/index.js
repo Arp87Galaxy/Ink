@@ -5,11 +5,22 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 111
+    userStatus: 0,
+    clickMenu:[],
+    activeMenu:'0'
   },
   mutations: {
-    increment (state) {
-      state.count++
+    setUserStatus (state,status) {
+      console.log("store:userStatus")
+      state.userStatus=status
+    },
+    addclickMenu (state,menu) {
+      console.log("store:addclickMenu")
+      state.clickMenu.push(menu)
+    },
+    setActiveMenu (state,index) {
+      console.log("store:activeMenu")
+      state.activeMenu=index
     }
   }
 })
