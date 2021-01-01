@@ -32,6 +32,8 @@ export default {
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   border: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .header{
   background-color: blue;

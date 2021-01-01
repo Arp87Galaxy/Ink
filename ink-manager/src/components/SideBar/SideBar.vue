@@ -79,7 +79,6 @@ export default {
   mounted() {
     this.menuList = JSON.parse(window.sessionStorage.getItem("menuList"));
     console.log("Created data is :");
-    console.log(window.sessionStorage.getItem("menuList"))
     console.log(this.$data);
     console.log(this.menuList[0].icon);
   },
@@ -89,6 +88,7 @@ export default {
 .sidebar {
   height: 100%;
   background-color: #545c64;
+
 }
 .sidebar >>> .el-menu {
   border-right: 0px;
