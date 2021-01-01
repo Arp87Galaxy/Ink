@@ -59,6 +59,11 @@ public class SysMenuEntity implements Serializable {
 	 */
 	private Integer orderNum;
 	/**
+	 *
+	 */
+	private String menuPanel;
+
+	/**
 	 * 子菜单
 	 */
 	@TableField(exist = false)

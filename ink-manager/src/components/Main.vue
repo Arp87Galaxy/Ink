@@ -1,22 +1,24 @@
 <!--  -->
 <template>
   <el-container class="main">
-  <el-header class="header"><router-view name="navbar"></router-view></el-header>
+  <el-header class="header"><nav-bar></nav-bar></el-header>
   <el-container class="container">
-    <el-aside width="200px"><router-view name="sidebar"></router-view></el-aside>
-    <el-main class="el-main"><router-view name="content"></router-view></el-main>
+    <el-aside width="200px"><side-bar></side-bar></el-aside>
+    <el-main class="el-main"><router-view ></router-view></el-main>
   </el-container>
 </el-container>
 </template>
 
 <script>
+import NavBar from './NavBar/NavBar.vue';
+import SideBar from './SideBar/SideBar.vue';
 export default {
   name: "Main",
   data() {
     return {};
   },
 
-  components: {},
+  components: {NavBar, SideBar},
 
   // computed: {},
 

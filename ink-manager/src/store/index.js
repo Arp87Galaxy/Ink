@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
     userStatus: 0,
     clickMenu:[],
-    activeMenu:'0'
+    activeMenu:'0',
+    activePanelName: 'Test'
   },
   mutations: {
     setUserStatus (state,status) {
@@ -21,6 +23,9 @@ const store = new Vuex.Store({
     setActiveMenu (state,index) {
       console.log("store:activeMenu")
       state.activeMenu=index
+    },
+    setActivePanelName(state,activePanelName){
+      state.activePanelName = activePanelName
     }
   }
 })

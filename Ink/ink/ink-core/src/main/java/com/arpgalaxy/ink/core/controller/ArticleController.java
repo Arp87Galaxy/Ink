@@ -34,10 +34,10 @@ public class ArticleController {
     /**
      * 列表
      */
-    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/list",method = RequestMethod.POST)
 //    @RequiresPermissions("core:article:list")
+    public ResponseEntity list(@RequestBody Map<String, Object> params){
 
-    public ResponseEntity list(@RequestParam Map<String, Object> params){
         PageUtils page = articleService.queryPage(params);
 
 //        return R.ok().put("page", page);

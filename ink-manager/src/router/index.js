@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '@/components/Login/Login'
-import NavBar from '@/components/NavBar/NavBar'
-import SideBar from '@/components/SideBar/SideBar'
+
 import Content from '@/components/Content/Content'
 import Main from '@/components/Main'
 import http from '@/http/httpRequest.js'
@@ -29,11 +28,9 @@ const routes = [
       {
         path: '/home',
         name: 'home',
-        components: {
-          navbar: NavBar,
-          sidebar: SideBar,
-          content: Content
-        }
+        component:Content,
+        children:[
+        ]
       },
     ]
   }
@@ -71,14 +68,15 @@ router.beforeEach((to, from, next) => {
           console.log(data.data)
           window.sessionStorage.setItem("menuList",JSON.stringify(data.data.data.menuList || []))
           window.sessionStorage.setItem("perms",JSON.stringify(data.data.data.perms || []))
+          if(to.name=='login'){
+            next({name: "main" })
+          }else{
+            next()
+          }
         }).catch({
 
         })
-        if(to.name=='login'){
-          next({name: "main" })
-        }else{
-          next()
-        }
+        
       }else{
         console.log("1")
         store.commit("setUserStatus", 0);

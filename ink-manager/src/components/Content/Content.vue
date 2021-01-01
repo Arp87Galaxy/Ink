@@ -16,33 +16,34 @@
         v-for="(menu, index) in getClickMenu"
         :key="index"
       >
-        <el-button @click="setActiveMenu(menu)">
-          {{ menu.name }}
-          <i class="el-icon-close" @click="removeActiveMenu(menu)"></i>
-        </el-button>
+      <el-button @click="setActiveMenu(menu)">
+        {{ menu.name }}
+        <i class="el-icon-close" @click="removeActiveMenu(menu)"></i>
+      </el-button>
       </el-menu-item>
     </el-menu>
-    <div class="display-panel">
+    <component :is="getActivePanel"></component>
+    <!-- <div class="display-panel">
       <iframe
             src="http://localhost:9534/ink/druid/sql.html"
             width="100%" height="500px" frameborder="0" scrolling="yes">
       </iframe>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-
+import  '@/components/Content/index.js'
 export default {
   name: "Content",
   data() {
     return {
       html: [],
+      ActivePanel: this.getActivePanel,
     };
   },
 
   components: {},
-
   computed: {
     getClickMenu() {
       return this.$store.state.clickMenu;
@@ -51,16 +52,31 @@ export default {
       console.log(this.$store.state.activeMenu);
       return this.$store.state.activeMenu + "";
     },
+     getActivePanel() {
+      console.log("activepanel: ")
+      console.log(this.$store.state.activePanelName)
+      return this.$store.state.activePanelName;
+    }
   },
 
   // mounted(){},
 
   methods: {
+   
     removeActiveMenu(menu) {
       this.getClickMenu.splice(this.getClickMenu.indexOf(menu), 1);
     },
     setActiveMenu(menu) {
       this.$store.commit("setActiveMenu", this.getClickMenu.indexOf(menu));
+      if(menu.type == 1){      
+        this.$store.commit(
+        "setActivePanelName",
+        menu.menuPanel
+      );}
+      else
+      {
+        console.log('不是1类型菜单')
+      }
       console.log(this.getClickMenu.indexOf(menu));
     },
     activeMenu(menu) {
@@ -70,13 +86,15 @@ export default {
       this.activeMenu = activeIndex;
     },
   },
+
   created() {
+
     this.$http({
       url: "/druid/sql.html",
       method: "get",
     }).then((data) => {
-      console.log("druid");
-      console.log(data.data);
+      // console.log("druid");
+      // console.log(data.data);
       this.html.push(data.data);
     });
   },

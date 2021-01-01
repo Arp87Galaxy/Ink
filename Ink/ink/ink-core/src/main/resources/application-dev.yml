@@ -4,7 +4,7 @@ spring:
     host: 175.24.111.52
     port: 5268
     password: root
-    timeout: 6s #连接池超时时长
+    timeout: 20s #连接池超时时长
     lettuce:
       pool:
         max-active: 1000 #连接池最大连接数

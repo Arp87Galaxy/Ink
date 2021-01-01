@@ -13,6 +13,7 @@
         <result property="type" column="type"/>
         <result property="icon" column="icon"/>
         <result property="orderNum" column="order_num"/>
+        <result property="menuPanel" column="menu_panel"></result>
     </resultMap>
 
 
