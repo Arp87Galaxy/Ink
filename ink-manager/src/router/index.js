@@ -12,7 +12,7 @@ const routes = [
   
   {
     path: '/',
-    redirect: { name: 'login' }
+    component:Content
   },
   {
     path: '/login',
@@ -20,14 +20,14 @@ const routes = [
     component: Login,
   },
   {
-    path: '/',
-    name: 'main',
+    path: '/admin',
+    name: 'admin',
     component: Main,
-    redirect: { path: '/home' },
+    redirect: { path: '/admin/home' },
     children: [
       {
-        path: '/home',
-        name: 'home',
+        path: '/admin/home',
+        name: 'admin-home',
         component:Content,
         children:[
         ]
@@ -69,7 +69,7 @@ router.beforeEach((to, from, next) => {
           window.sessionStorage.setItem("menuList",JSON.stringify(data.data.data.menuList || []))
           window.sessionStorage.setItem("perms",JSON.stringify(data.data.data.perms || []))
           if(to.name=='login'){
-            next({name: "main" })
+            next({name: "admin" })
           }else{
             next()
           }
