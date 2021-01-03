@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '@/components/Login/Login'
+import Login from '@/components/admin/Login/Login'
 
-import Content from '@/components/Content/Content'
-import Main from '@/components/Main'
+import Content from '@/components/admin/Content/Content'
+import Ink from '@/components/blog/Ink'
+import Main from '@/components/admin/Main'
 import http from '@/http/httpRequest.js'
 import store from '@/store'
 Vue.use(VueRouter)
@@ -12,7 +13,12 @@ const routes = [
   
   {
     path: '/',
-    component:Content
+    redirect: { path: '/blog' },
+  },
+  {
+    path:'/blog',
+    name:'blog',
+    component:Ink
   },
   {
     path: '/login',
@@ -48,52 +54,57 @@ router.beforeEach((to, from, next) => {
   console.log("全局前置守卫：token验证是否登录，获取菜单列表")
   console.log(to)
   console.log(from)
-  http({
-    url: "/core/sys/isLogined",
-    method: "post",
-  })
-    .then((data) => {
-      console.log(data.data);
-        // throw new Error([data.data.message]);
-        console.log(data.data.data == true)
-        console.log(to.name!='login')
-      if (data.data.data == true){
-        store.commit("setUserStatus", 1);
-        //todo 获取菜单列表
-        http({
-          url:'core/sys/menu/init',
-          method:'post'
-        }).then((data) => {
-          console.log("菜单列表")
-          console.log(data.data)
-          window.sessionStorage.setItem("menuList",JSON.stringify(data.data.data.menuList || []))
-          window.sessionStorage.setItem("perms",JSON.stringify(data.data.data.perms || []))
-          if(to.name=='login'){
-            next({name: "admin" })
-          }else{
-            next()
-          }
-        }).catch({
-
-        })
-        
-      }else{
-        console.log("1")
-        store.commit("setUserStatus", 0);
-        if(to.name!='login'){
-          console.log("2")
-          next({name: "login" })
-        }else{
-          console.log("3")
-          next()
-        } 
-      }
+  if(to.name !='blog'){
+    http({
+      url: "/core/sys/isLogined",
+      method: "post",
     })
-    .catch((e) => {
-      alert(e);
-      console.log(e);
-      // router.go(0);
-    });
+      .then((data) => {
+        console.log(data.data);
+          // throw new Error([data.data.message]);
+          console.log(data.data.data == true)
+          console.log(to.name!='login')
+        if (data.data.data == true){
+          store.commit("setUserStatus", 1);
+          //todo 获取菜单列表
+          http({
+            url:'core/sys/menu/init',
+            method:'post'
+          }).then((data) => {
+            console.log("菜单列表")
+            console.log(data.data)
+            window.sessionStorage.setItem("menuList",JSON.stringify(data.data.data.menuList || []))
+            window.sessionStorage.setItem("perms",JSON.stringify(data.data.data.perms || []))
+            if(to.name=='login'){
+              next({name: "admin" })
+            }else{
+              next()
+            }
+          }).catch({
+  
+          })
+          
+        }else{
+          console.log("1")
+          store.commit("setUserStatus", 0);
+          if(to.name!='login'){
+            console.log("2")
+            next({name: "login" })
+          }else{
+            console.log("3")
+            next()
+          } 
+        }
+      })
+      .catch((e) => {
+        alert(e);
+        console.log(e);
+        // router.go(0);
+      });
+  }else{
+    next();
+  }
+ 
 })
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
