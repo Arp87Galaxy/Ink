@@ -44,7 +44,13 @@ public class SysMenuController extends BaseController {
         resultMap.put("perms",perms);
         return new ResponseEntity<Map>(InkStatus.CORE_OK,"ok",resultMap);
     }
+    @RequestMapping("/list")
+    @RequiresPermissions("core:sysmenu:list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = sysMenuService.queryPage(params);
 
+        return R.ok().put("page", page);
+    }
 
     /**
      * 信息

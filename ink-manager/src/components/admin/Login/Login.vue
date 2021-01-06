@@ -107,7 +107,7 @@ export default {
               ) {
 
                 setAuthToken(data.data.data)
-                this.$router.push({ path: "/main", name: "main" });
+                this.$router.push({ path: "/admin", name: "admin" });
               } else {
                 this.$router.go(0);
                 throw new Error([data.data.message]);

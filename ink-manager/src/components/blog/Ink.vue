@@ -3,14 +3,15 @@
   <div class="svgdemo">
     <svg style="width: 1000px; height: 1200px">
         
- <ellipse
-        cx="-30"
+<ellipse
+        cx="300"
         cy="300"
         rx="100"
-        ry="300"
+        ry="100"
         style="fill: rgba(0,0,255,0); stroke: purple; stroke-width: 2"
       >
-      <animate attributeName="rx" from="100" to="300" dur="0.5"/></ellipse>
+      <!-- <animate attributeName="rx" from="100" to="300" dur="0.5"/> -->
+      <p>nihao</p> </ellipse>
         
      
     </svg>
@@ -36,9 +37,22 @@ export default {
   //	方法集合
   methods: {},
   //	生命周期 - 创建完成（可以访问当前this实例）
-  created() {},
+  created() {
+
+  },
   //	生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {},
+  mounted() {
+    this.$anime({
+  targets: ['.svgdemo ellipse'],
+  rx: '200',
+  ry: '200',
+  baseFrequency: 0,
+  scale: 1,
+  loop: true,
+  direction: 'alternate',
+  easing: 'easeInOutExpo'
+});
+  },
   beforeCreate() {}, //	生命周期 - 创建之前
   beforeMount() {}, //	生命周期 - 挂载之前
   beforeUpdate() {}, //	生命周期 - 更新之前

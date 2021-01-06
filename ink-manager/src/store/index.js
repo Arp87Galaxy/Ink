@@ -9,7 +9,7 @@ const store = new Vuex.Store({
     userStatus: 0,
     clickMenu:[],
     activeMenu:'0',
-    activePanelName: 'Test'
+    activePanelName: 'HomePage'
   },
   mutations: {
     setUserStatus (state,status) {
