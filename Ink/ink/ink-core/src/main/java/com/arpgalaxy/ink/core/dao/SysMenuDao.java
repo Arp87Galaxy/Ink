@@ -4,6 +4,8 @@ import com.arpgalaxy.ink.core.entity.SysMenuEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * 菜单管理
  * 
@@ -13,5 +15,6 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SysMenuDao extends BaseMapper<SysMenuEntity> {
-	
+
+    List queryMenuColumnNames();
 }

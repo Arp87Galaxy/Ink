@@ -41,6 +41,8 @@ public class PageUtils implements Serializable {
 	 */
 	private List<?> list;
 
+
+
 	/**
 	 * 解决反序列化没有默认构造异常
 	 */

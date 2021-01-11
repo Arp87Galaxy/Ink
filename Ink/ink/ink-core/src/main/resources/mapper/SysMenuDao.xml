@@ -15,6 +15,9 @@
         <result property="orderNum" column="order_num"/>
         <result property="menuPanel" column="menu_panel"></result>
     </resultMap>
-
+    <select id="queryMenuColumnNames" resultType="string">
+        SELECT COLUMN_NAME FROM information_schema.COLUMNS
+        WHERE TABLE_SCHEMA = 'ink' AND TABLE_NAME = 'ink_sys_menu';
+    </select>
 
 </mapper>

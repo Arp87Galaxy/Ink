@@ -6,6 +6,7 @@ import com.arpgalaxy.ink.common.utils.response.InkStatus;
 import com.arpgalaxy.ink.common.utils.response.ResponseEntity;
 import com.arpgalaxy.ink.core.controller.commons.BaseController;
 import com.arpgalaxy.ink.core.service.SysUserService;
+import net.minidev.json.JSONArray;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -48,8 +49,9 @@ public class SysMenuController extends BaseController {
     @RequiresPermissions("core:sysmenu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysMenuService.queryPage(params);
+        List columnNames = sysMenuService.queryMenuColumnNames();
 
-        return R.ok().put("page", page);
+        return R.ok().put("page", page).put("columnNames",columnNames);
     }
 
     /**

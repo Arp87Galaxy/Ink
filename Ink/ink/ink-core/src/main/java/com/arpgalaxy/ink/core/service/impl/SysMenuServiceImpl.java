@@ -72,6 +72,11 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuDao, SysMenuEntity> i
         return null;
     }
 
+    @Override
+    public List queryMenuColumnNames() {
+        return sysMenuDao.queryMenuColumnNames();
+    }
+
     private List<SysMenuEntity> getChildren(SysMenuEntity pMenu, List<SysMenuEntity> sysMenuEntities) {
         List<SysMenuEntity> childrens = sysMenuEntities.stream()
                 .filter(sysMenuEntity -> sysMenuEntity.getParentId()==pMenu.getMenuId())

@@ -19,17 +19,17 @@ export default {
         pageSize: 0,
         totalCount: 0,
         totalPage: 0,
-        columnNames: {
-          menuId: "menuId",
-          parentId: "parentId",
-          name: "name",
-          url: "url",
-          perms:"perms",
-          type: "type",
-          icon: "icon",
-          orderNum:"orderNum",
-          menuPanel:"menuPanel"
-        },
+        columnNames: []
+          // menuId: "menuId",
+          // parentId: "parentId",
+          // name: "name",
+          // url: "url",
+          // perms:"perms",
+          // type: "type",
+          // icon: "icon",
+          // orderNum:"orderNum",
+          // menuPanel:"menuPanel"
+        
       },
       // page:{}
     };
@@ -45,14 +45,19 @@ export default {
     }).then((data) => {
       // console.log("AdminList data:");
       // console.log(data);
-      // console.log(data.data);
+      console.log(data.data);
       console.log(data.data.page);
       this.listData.objects = data.data.page.list;
       this.listData.pageSize = data.data.page.pageSize;
       this.listData.totalCount = data.data.page.totalCount;
       this.listData.totalPage = data.data.page.totalPage;
+    this.listData.columnNames = data.data.columnNames
+
+
+  // console.log(this.listData.columnNames)
       // this.page=data.data.page
-      // console.log("page is?")
+      console.log( data.data.columnNames)
+      
       // console.log(this.page)
     });
   },
