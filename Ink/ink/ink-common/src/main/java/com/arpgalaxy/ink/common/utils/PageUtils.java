@@ -11,6 +11,7 @@ package com.arpgalaxy.ink.common.utils;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -42,6 +43,15 @@ public class PageUtils implements Serializable {
 	private List<?> list;
 
 
+	private List<?> columnNames;
+
+	public List<?> getColumnNames() {
+		return columnNames;
+	}
+
+	public void setColumnNames(List<?> columnNames) {
+		this.columnNames = columnNames;
+	}
 
 	/**
 	 * 解决反序列化没有默认构造异常

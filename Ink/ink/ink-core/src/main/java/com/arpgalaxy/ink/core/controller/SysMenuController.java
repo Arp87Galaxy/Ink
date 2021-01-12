@@ -50,7 +50,7 @@ public class SysMenuController extends BaseController {
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysMenuService.queryPage(params);
         List columnNames = sysMenuService.queryMenuColumnNames();
-
+        page.setColumnNames(columnNames);
         return R.ok().put("page", page).put("columnNames",columnNames);
     }
 

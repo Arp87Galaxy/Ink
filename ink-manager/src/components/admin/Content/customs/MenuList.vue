@@ -51,13 +51,13 @@ export default {
       this.listData.pageSize = data.data.page.pageSize;
       this.listData.totalCount = data.data.page.totalCount;
       this.listData.totalPage = data.data.page.totalPage;
-    this.listData.columnNames = data.data.columnNames
+      this.listData.columnNames = data.data.page.columnNames
 
 
   // console.log(this.listData.columnNames)
       // this.page=data.data.page
       console.log( data.data.columnNames)
-      
+          console.log( data.data.page.columnNames)
       // console.log(this.page)
     });
   },
