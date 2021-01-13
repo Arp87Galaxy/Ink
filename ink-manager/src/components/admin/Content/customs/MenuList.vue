@@ -15,11 +15,11 @@ export default {
       currentLimit: 10,
       //props参数
       listData: {
-        objects: [],
-        pageSize: 0,
-        totalCount: 0,
-        totalPage: 0,
-        columnNames: []
+        // objects: [],
+        // pageSize: 0,
+        // totalCount: 0,
+        // totalPage: 0,
+        // columnNames: []
           // menuId: "menuId",
           // parentId: "parentId",
           // name: "name",
@@ -46,14 +46,14 @@ export default {
       // console.log("AdminList data:");
       // console.log(data);
       console.log(data.data);
-      console.log(data.data.page);
-      this.listData.objects = data.data.page.list;
-      this.listData.pageSize = data.data.page.pageSize;
-      this.listData.totalCount = data.data.page.totalCount;
-      this.listData.totalPage = data.data.page.totalPage;
-      this.listData.columnNames = data.data.page.columnNames
+      console.log(data.data.page.list);
+      // this.listData.objects = data.data.page.list;
+      // this.listData.pageSize = data.data.page.pageSize;
+      // this.listData.totalCount = data.data.page.totalCount;
+      // this.listData.totalPage = data.data.page.totalPage;
+      // this.listData.columnNames = data.data.page.columnNames
 
-
+    this.listData = data.data
   // console.log(this.listData.columnNames)
       // this.page=data.data.page
       console.log( data.data.columnNames)

@@ -71,7 +71,7 @@ public class SysMenuController extends BaseController {
     @RequestMapping("/save")
     @RequiresPermissions("core:sysmenu:save")
     public R save(@RequestBody SysMenuEntity sysMenu){
-		sysMenuService.save(sysMenu);
+        sysMenuService.save(sysMenu);
 
         return R.ok();
     }

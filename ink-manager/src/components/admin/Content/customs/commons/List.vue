@@ -2,8 +2,9 @@
 <template>
   <div class="list-panel">
     <el-table
+    v-if="listData.page"
       :data="
-        listData.objects
+        listData.page['list']
         .filter(
           (data) =>
             !search ||
@@ -15,7 +16,7 @@
       style="width: 100%"
     >
       <el-table-column
-        v-for="(value, index) in listData.columnNames"
+        v-for="(value, index) in listData.page.columnNames"
         :label="value"
         :prop="value"
         :key="index"
@@ -58,8 +59,9 @@
     <div class="pagination">
       <el-pagination
         background
-        :page-sizes="[10, 20, 30, 40]"
-        :page-size="10"
+        :page-sizes="[1, 2, 3, 4]"
+        :page-size="1"
+        :pager-count="5"
         layout="total, sizes, prev, pager, next, jumper"
         :total="listData.totalCount"
       >
