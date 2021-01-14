@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/controller/SysMenuController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+              <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,10 +34,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ink-core/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ink-core/src/main/resources/application-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/PageUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="616">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -86,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/TokenGenerator.java" />
         <option value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/RedisKeyPrefix.java" />
         <option value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/RedisKeyGenertor.java" />
         <option value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/shiro/filter/LoginFilter.java" />
@@ -121,7 +138,6 @@
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/controller/commons/BaseController.java" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/service/impl/SysUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/controller/commons/ControllerGlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/ink-core/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/config/DruidDataSource.java" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/config/ShiroConfig.java" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/config/DruidConfig.java" />
@@ -137,6 +153,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/PageUtils.java" />
         <option value="$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/controller/SysMenuController.java" />
+        <option value="$PROJECT_DIR$/ink-core/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/ink-core/src/main/resources/application-dev.yml" />
       </list>
     </option>
   </component>
@@ -181,6 +199,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="CatdeaLogs" />
       <pane id="ProjectPane">
         <subPane>
@@ -381,7 +400,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -626,6 +644,7 @@
       <workItem from="1610367290138" duration="10445000" />
       <workItem from="1610462995728" duration="4835000" />
       <workItem from="1610542985605" duration="4691000" />
+      <workItem from="1610619157005" duration="129000" />
     </task>
     <servers />
   </component>
@@ -662,13 +681,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220502000" />
+    <option name="totallyTimeSpent" value="220631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48617175" visible="true" weight="0.2857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48617175" visible="true" weight="0.23827292" />
       <window_info id="Structure" order="1" sideWeight="0.5138282" side_tool="true" weight="0.27292112" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -783,7 +802,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/config/DruidDataSource.java" />
     <entry file="jar://F:/reposi/com/alibaba/druid/1.1.10/druid-1.1.10.jar!/com/alibaba/druid/pool/DruidDataSource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -795,13 +813,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ink-common/src/test/java/Word.java" />
-    <entry file="file://$PROJECT_DIR$/ink-core/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ink-common/src/test/java/word/Main.java" />
     <entry file="file://$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/config/DruidConfig.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1139,20 +1150,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/PageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ink-core/src/main/java/com/arpgalaxy/ink/core/controller/SysMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="69" column="7" lean-forward="true" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ink-common/src/main/java/com/arpgalaxy/ink/common/utils/PageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ink-core/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ink-core/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>

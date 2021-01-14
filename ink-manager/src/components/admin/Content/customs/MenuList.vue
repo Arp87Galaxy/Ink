@@ -11,25 +11,25 @@ export default {
   name: "MenuList",
   data() {
     return {
-      currentPage: 1,
-      currentLimit: 10,
       //props参数
       listData: {
+        currPage: 1,
+        pageSize: 10,
+        data: {}
         // objects: [],
         // pageSize: 0,
         // totalCount: 0,
         // totalPage: 0,
         // columnNames: []
-          // menuId: "menuId",
-          // parentId: "parentId",
-          // name: "name",
-          // url: "url",
-          // perms:"perms",
-          // type: "type",
-          // icon: "icon",
-          // orderNum:"orderNum",
-          // menuPanel:"menuPanel"
-        
+        // menuId: "menuId",
+        // parentId: "parentId",
+        // name: "name",
+        // url: "url",
+        // perms:"perms",
+        // type: "type",
+        // icon: "icon",
+        // orderNum:"orderNum",
+        // menuPanel:"menuPanel"
       },
       // page:{}
     };
@@ -39,8 +39,8 @@ export default {
       url: "core/sys/menu/list",
       method: "post",
       params: {
-        page: this.currentPage,
-        limit: this.currentLimit,
+        page: this.listData.currentPage,
+        limit: this.listData.currentLimit,
       },
     }).then((data) => {
       // console.log("AdminList data:");
@@ -53,11 +53,11 @@ export default {
       // this.listData.totalPage = data.data.page.totalPage;
       // this.listData.columnNames = data.data.page.columnNames
 
-    this.listData = data.data
-  // console.log(this.listData.columnNames)
+      this.listData.data = data.data;
+      // console.log(this.listData.columnNames)
       // this.page=data.data.page
-      console.log( data.data.columnNames)
-          console.log( data.data.page.columnNames)
+      console.log(data.data.columnNames);
+      console.log(data.data.page.columnNames);
       // console.log(this.page)
     });
   },
