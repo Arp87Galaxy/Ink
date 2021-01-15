@@ -8,7 +8,7 @@ const store = new Vuex.Store({
   state: {
     userStatus: 0,
     clickMenu:[],
-    activeMenu:'0',
+    activeMenu:0,
     activePanelName: 'HomePage'
   },
   mutations: {

@@ -73,7 +73,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuDao, SysMenuEntity> i
     }
 
     @Override
-    public List queryMenuColumnNames() {
+    public List<String> queryMenuColumnNames() {
         return sysMenuDao.queryMenuColumnNames();
     }
 

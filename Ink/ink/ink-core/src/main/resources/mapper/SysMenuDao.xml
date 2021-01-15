@@ -17,7 +17,7 @@
     </resultMap>
     <select id="queryMenuColumnNames" resultType="string">
         SELECT COLUMN_NAME FROM information_schema.COLUMNS
-        WHERE TABLE_SCHEMA = 'ink' AND TABLE_NAME = 'ink_sys_menu';
+        WHERE TABLE_SCHEMA = 'ink' AND TABLE_NAME = 'ink_sys_menu' ORDER BY NULL;
     </select>
 
 </mapper>

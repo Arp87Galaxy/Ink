@@ -23,6 +23,6 @@ public interface SysMenuService extends IService<SysMenuEntity> {
     List<SysMenuEntity> queryMenuList(SysUserEntity sysUserEntity);
     List<SysMenuEntity> queryMenuTreeByUserId(SysUserEntity userEntity);
 
-    List queryMenuColumnNames();
+    List<String> queryMenuColumnNames();
 }
 

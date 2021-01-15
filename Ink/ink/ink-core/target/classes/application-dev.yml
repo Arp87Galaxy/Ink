@@ -1,9 +1,11 @@
 spring:
   # redis 配置
   redis:
-    host: 175.24.111.52
-    port: 5268
-    password: root
+#    host: 175.24.111.52
+#    port: 5268
+    host: 192.168.1.100
+    port: 6379
+#    password: root
     timeout: 20s #连接池超时时长
     lettuce:
       pool:

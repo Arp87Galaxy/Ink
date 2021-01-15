@@ -4,6 +4,7 @@ import java.util.*;
 
 import com.arpgalaxy.ink.common.utils.response.InkStatus;
 import com.arpgalaxy.ink.common.utils.response.ResponseEntity;
+import com.arpgalaxy.ink.common.utils.string.CamelCase;
 import com.arpgalaxy.ink.core.controller.commons.BaseController;
 import com.arpgalaxy.ink.core.service.SysUserService;
 import net.minidev.json.JSONArray;
@@ -49,9 +50,12 @@ public class SysMenuController extends BaseController {
     @RequiresPermissions("core:sysmenu:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = sysMenuService.queryPage(params);
-        List columnNames = sysMenuService.queryMenuColumnNames();
-        page.setColumnNames(columnNames);
-        return R.ok().put("page", page).put("columnNames",columnNames);
+        List<String> columnNames = sysMenuService.queryMenuColumnNames();
+        //数据库列名list转驼峰,toArray(new String[columnNames.size()])中<T>声明是泛型方法，在方法上才能使用泛型。所以返回的是String数组,否则强转也会出现object转string错误
+        List<String> strings = Arrays.asList(CamelCase.toCamelCase(columnNames.toArray(new String[columnNames.size()])));
+        page.setColumnNames(strings);
+
+        return R.ok().put("page", page).put("columnNames",strings);
     }
 
     /**

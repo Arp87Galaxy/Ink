@@ -5,7 +5,7 @@ spring:
 #    port: 5268
     host: 192.168.1.100
     port: 6379
-    password: root
+#    password: root
     timeout: 20s #连接池超时时长
     lettuce:
       pool:

@@ -43,13 +43,13 @@ public class PageUtils implements Serializable {
 	private List<?> list;
 
 
-	private List<?> columnNames;
+	private List<String> columnNames;
 
 	public List<?> getColumnNames() {
 		return columnNames;
 	}
 
-	public void setColumnNames(List<?> columnNames) {
+	public void setColumnNames(List<String> columnNames) {
 		this.columnNames = columnNames;
 	}
 
