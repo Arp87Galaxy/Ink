@@ -16,10 +16,10 @@
         v-for="(menu, index) in getClickMenu"
         :key="index"
       >
-      <el-button @click="setActiveMenu(menu)">
-        {{ menu.name }}
-        <i class="el-icon-close" @click="removeActiveMenu(menu)"></i>
-      </el-button>
+        <el-button @click="setActiveMenu(menu)">
+          {{ menu.name }}
+          <i class="el-icon-close" @click="removeActiveMenu(menu)"></i>
+        </el-button>
       </el-menu-item>
     </el-menu>
     <component :is="getActivePanel"></component>
@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import  '@/components/admin/Content/index.js'
+import "@/components/admin/Content/index.js";
 export default {
   name: "Content",
   data() {
@@ -46,49 +46,41 @@ export default {
   components: {},
   computed: {
     getClickMenu() {
-      return this.$store.state.clickMenu;
+      return this.$store.getters.getClickMenu;
     },
     getActiveMenu() {
-      console.log(this.$store.state.activeMenu);
-      return this.$store.state.activeMenu + "";
+      return this.$store.getters.getActiveMenu + "";
     },
-     getActivePanel() {
-      console.log("activepanel: ")
-      console.log(this.$store.state.activePanelName)
-      return this.$store.state.activePanelName;
-    }
+    getActivePanel() {
+      return this.$store.getters.getActivePanelName;
+    },
   },
 
   // mounted(){},
 
   methods: {
-   
     removeActiveMenu(menu) {
       this.getClickMenu.splice(this.getClickMenu.indexOf(menu), 1);
     },
     setActiveMenu(menu) {
-      this.$store.commit("setActiveMenu", this.getClickMenu.indexOf(menu));
-      if(menu.type == 1){      
-        this.$store.commit(
-        "setActivePanelName",
-        menu.menuPanel
-      );}
-      else
-      {
-        console.log('不是1类型菜单')
+      this.$store.dispatch("setActiveMenu", this.getClickMenu.indexOf(menu));
+      this.$$tore.dispatch("setListMenuRelativeUrl");
+      if (menu.type == 1) {
+        this.$store.dispatch("setActivePanelName", menu.menuPanel);
+      } else {
+        console.log("不是1类型菜单");
       }
       console.log(this.getClickMenu.indexOf(menu));
     },
     activeMenu(menu) {
       console.log("active-menu");
-      let activeIndex = this.$store.state.clickMenu.indexOf(menu);
+      let activeIndex = this.$store.getters.getClickMenu.indexOf(menu);
       console.log(activeIndex);
       this.activeMenu = activeIndex;
     },
   },
 
   created() {
-
     this.$http({
       url: "/druid/sql.html",
       method: "get",

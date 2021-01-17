@@ -52,28 +52,21 @@ export default {
 
   methods: {
     submenuClick(menu) {
-      console.log(menu.name)
-      console.log(menu.menuPanel)
-      console.log(menu)
-      // console.log(this.$store.state.clickMenu.includes(menu))
-      if (!this.$store.state.clickMenu.includes(menu))
-        this.$store.commit("addclickMenu", menu);
-      // console.log(this.$store.state.clickMenu.length)
-      this.$store.commit(
+      if (!this.$store.getters.getClickMenu.includes(menu))
+        this.$store.dispatch("addclickMenu", menu);
+      this.$store.dispatch(
         "setActiveMenu",
-        this.$store.state.clickMenu.indexOf(menu)
+        this.$store.getters.getClickMenu.indexOf(menu)
       );
-      if(menu.type == 1){      
-        this.$store.commit(
-        "setActivePanelName",
-        menu.menuPanel
-      );}
-      else
-      {
-        console.log('不是1类型菜单')
+      this.$store.dispatch("setListMenuRelativeUrl");
+
+      if (menu.type == 1) {
+        this.$store.dispatch("setActivePanelName", menu.menuPanel);
+      } else {
+        console.log("不是1类型菜单");
       }
 
-      console.log(this.$store.state.clickMenu.indexOf(menu));
+      console.log(this.$store.getters.getClickMenu.indexOf(menu));
     },
   },
   mounted() {
@@ -88,7 +81,6 @@ export default {
 .sidebar {
   height: 100%;
   background-color: #545c64;
-
 }
 .sidebar >>> .el-menu {
   border-right: 0px;
