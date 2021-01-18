@@ -11,7 +11,7 @@ module.exports = {
             // 日志级别
             // logLevel: "debug",
             pathRewrite: {
-                '^/ink': '/'
+                  '^/ink': '/'
             }
         }
     }

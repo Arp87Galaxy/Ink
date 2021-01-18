@@ -7,6 +7,7 @@ import com.arpgalaxy.ink.common.utils.response.ResponseEntity;
 import com.arpgalaxy.ink.common.utils.string.CamelCase;
 import com.arpgalaxy.ink.core.controller.commons.BaseController;
 import com.arpgalaxy.ink.core.service.SysUserService;
+import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONArray;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,7 +88,6 @@ public class SysMenuController extends BaseController {
     @RequiresPermissions("core:sysmenu:update")
     public R update(@RequestBody SysMenuEntity sysMenu){
 		sysMenuService.updateById(sysMenu);
-
         return R.ok();
     }
 
@@ -98,7 +98,6 @@ public class SysMenuController extends BaseController {
     @RequiresPermissions("core:sysmenu:delete")
     public R delete(@RequestBody Long[] menuIds){
 		sysMenuService.removeByIds(Arrays.asList(menuIds));
-
         return R.ok();
     }
 
