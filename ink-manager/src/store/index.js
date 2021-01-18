@@ -9,7 +9,7 @@ const menu = {
     clickMenu: [],
     activeMenu: 0,
     activePanelName: 'HomePage',
-    listMenuRelativeUrl: ''
+    listMenuRelativeUrl: ""
 
   }),
   getters: {

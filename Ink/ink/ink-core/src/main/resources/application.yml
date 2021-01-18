@@ -1,4 +1,5 @@
 # Tomcat
+
 server:
   tomcat:
     uri-encoding: UTF-8
@@ -16,6 +17,9 @@ spring:
   profiles:
     # 环境 开发dev，测试test，生产prod
     active: dev
+  devtools:
+    restart:
+      enabled: true
   datasource:
     druid:
       type: com.alibaba.druid.pool.DruidDataSource

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.arpgalaxy.ink.core.dao.CommonDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <select id="queryMenuColumnNames" resultType="string">
+        SELECT COLUMN_NAME FROM information_schema.COLUMNS
+        WHERE TABLE_SCHEMA = 'ink' AND TABLE_NAME = #{tableName} ORDER BY NULL;
+    </select>
+
+</mapper>
